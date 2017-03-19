@@ -1,0 +1,115 @@
+<html  ng-app="HomePageView" class="homediv" ng-controller="HomePageController">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<link rel="icon" href="src/main/webapp/resources/images/cc2.png">
+<title>CC-Console</title> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+    <script src="https://rawgit.com/dwmkerr/angular-modal-service/master/dst/angular-modal-service.js"></script>
+    <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.2/ui-bootstrap-tpls.min.js"></script> 
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+    <script type="text/javascript" src="js/custom/Router.js"></script>
+    <script type="text/javascript" src="js/custom/HomePageController.js"></script>
+    <script type="text/javascript" src="js/custom/ProfileController.js"></script>
+    <script type="text/javascript" src="js/custom/UserController.js"></script>
+    <script type="text/javascript" src="js/custom/SubscriptionController.js"></script>
+    <script type="text/javascript" src="js/custom/ServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/ViewServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/ManageServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/FlowController.js"></script>
+    <script type="text/javascript" src="js/custom/DestinationController.js"></script>
+    <script type="text/javascript" src="js/custom/FlightInfoServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/AdministrationServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/TravelInfoServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/AirlineInfoServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/WeatherInfoServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/AirportInfoServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/TransportInfoServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/FlightConnectionServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/MessageBroadcastServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/ErrorController.js"></script>
+    <script type="text/javascript" src="js/custom/AboutUsController.js"></script>
+    
+    
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>
+    
+    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/fontawesome/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/local.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
+    </head>
+    
+    <body background="src/main/webapp/resources/images/backcover.jpg" >
+ 
+       <div id="wrapper">
+          <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <i class="nav navbar-nav navbar-left navbar-user logo "> <img class="img-responsive" src="src/main/webapp/resources/images/logo.jpg" width="50" height="50"></i>
+          <i class="nav navbar-nav navbar-left navbar-user bodyHeader">Cloud Connector</i>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <ul class="nav navbar-nav navbar-right navbar-user adminIcon">
+               <li class="dropdown user-dropdown">
+                        <a class="dropdown-toggle " data-toggle="dropdown"><i class="fa fa-user-circle fa-2x"></i><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a ><i class="fa fa-refresh"></i>Refresh</a></li>
+                            <li><a ><i class="fa fa-power-off"></i>Log Out</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+            </div>
+            
+         <!--nav sidebar -->
+<aside>
+  <nav class="navbar sidebar navbar-fixed-top" role="navigation">
+
+<div class="nav-side-menu">
+   
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list">
+  
+            <ul id="menu-content" class="menu-content collapse out">
+            <li><a href="#"><i class="fa fa-home"></i>Home</a></li>    
+                    <li><a href="#Profile"><i class="fa fa-user-circle"></i> Profile</a></li>
+                    <li><a href="#Dashboard"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+                    <li><a href="#Accounts"><i class="fa fa-list-ol"></i> Accounts</a></li>
+                    <li><a href="#Services"><i class="fa fa-cogs"></i> Services</a></li>
+                    <li><a href="#Flows"><i class="fa fa-random"></i> Flows</a></li>
+                    <li><a href="#Messaging"><i class="fa fa-envelope-o"></i> Messaging</a></li>
+                    <li><a href="#Process"><i class="fa fa-sun-o"></i> Process</a></li>
+                    <li><a href="#Tasks"><i class="fa fa-tasks"></i> Tasks</a></li>
+                    <li><a href="#Users"><i class="fa fa-users"></i> Users</a></li>
+                    <li><a href="#Groups"><i class="fa fa-comments-o"></i> Groups</a></li>
+                    <li><a href="#Subscription"><i class="fa fa-shopping-bag"></i> Subscription</a> </li>
+                    <li><a href="#Errors"><i class="fa fa-times"></i> Errors</a></li>
+                    <li><a href="#AboutUs"><i class="fa fa-globe"></i> AboutUs</a></li>
+                    </ul>
+     </div>
+</div>
+  </nav>
+  
+</aside>
+
+<div class="main">
+</div>
+          
+          
+        </nav>
+    </div>
+    <div ng-view ></div>
+   
+   </body>
+   
+    </html>
+
