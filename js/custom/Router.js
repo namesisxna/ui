@@ -1,5 +1,6 @@
 (function(){
- var app=angular.module('HomePageView', ['ngRoute' ,'ui.bootstrap'])
+ var app=angular.module('HomePageView', ['ngRoute' ,'ui.bootstrap']);
+ alert("from route.js")
 
 
 app.config(function($routeProvider) {
@@ -10,7 +11,8 @@ app.config(function($routeProvider) {
 //    })
     .when("/Profile", {  
         templateUrl: "Profile.html",  
-        controller: "ProfileController"  
+        controller: "ProfileController"
+		
     })
     .when("/Users", {  
         templateUrl: "Users.html",  
@@ -84,27 +86,13 @@ app.config(function($routeProvider) {
         templateUrl: "AboutUs.html",  
         controller: "AboutUsController"  
     })
+	
     .otherwise({redirectTo: "/"})
 })
 
 app.config(['$locationProvider', function($locationProvider){$locationProvider.hashPrefix('');}]); 
  
- app.directive('customPopover', function () {
-	    return {
-	        restrict: 'A',
-	        template: '<span>{{label}}</span>',
-	        link: function (scope, el, attrs) {
-	            scope.label = attrs.popoverLabel;
-	            $(el).popover({
-	                trigger: 'outsideClick',
-	                html: true,
-	                content: attrs.popoverHtml,
-	                placement: attrs.popoverPlacement
-	            });
-	        }
-	    
-	    };
-	});
+ 
  
 }());
 
