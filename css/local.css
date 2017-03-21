@@ -1833,13 +1833,7 @@ table.tablesorter thead tr th:hover {
     margin-top: 56px;
    }
 
-   @media (min-width: 768px) and (max-width: 998px){
-       .navbar.navbar-default.navbar-fixed-top{
-       margin-top: 100px;
-       }
-      .sidebar.navbar-fixed-top {
-    margin-top: 56px;
-}    }
+ 
 
   
 /* Custom sidebar menu */

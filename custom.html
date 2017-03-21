@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="HomePageView" ng-controller="HomePageController">
     <head>        
         <!-- META SECTION -->
         <title>Cognizant cloud connector</title>            
@@ -11,10 +11,10 @@
         <!-- END META SECTION -->
         
         <!-- CSS INCLUDE -->        
-        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-blue.css"/>
+        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-black.css"/>
         <!-- EOF CSS INCLUDE -->                                    
     </head>
-    <body>
+    <body >
         <!-- START PAGE CONTAINER -->
         <div class="page-container">
             
@@ -28,11 +28,11 @@
                     </li>
                     <li class="xn-profile">
                         <a href="#" class="profile-mini">
-                            <img src="assets/images/users/no-image.jpg" alt="John Doe"/>
+                            <img src="assets/images/users/no-image.jpg" />
                         </a>
                         <div class="profile">
                             <div class="profile-image">
-                                <img src="assets/images/users/no-image.jpg" alt="John Doe"/>
+                                <img src="assets/images/users/no-image.jpg"/>
                             </div>
                             <div class="profile-data">
                                 <div class="profile-data-name">Admin</div>
@@ -43,9 +43,12 @@
                             </div>
                         </div>                                                                        
                     </li>
+					 <li class="active">
+                        <a href="#Profile"><span class="fa fa-user"></span> <span class="xn-text">Profile</span></a>                        
+                    </li> 
                     
-                    <li class="active">
-                        <a href="custom.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
+                    <li class="xn-openable">
+                        <a href="#"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
                     </li>                    
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-book"></span> <span class="xn-text">Accounts</span></a>
@@ -128,62 +131,12 @@
                 </ul>
                 <!-- END X-NAVIGATION VERTICAL -->                     
 
-                <!-- START BREADCRUMB -->
-                <ul class="breadcrumb">
-                    <li><a href="#">Home</a></li>                    
-                    <li class="active">Dashboard</li>
-                </ul>
-                <!-- END BREADCRUMB -->                       
+                                    
                 
                 <!-- PAGE CONTENT WRAPPER -->
                 <div class="page-content-wrap">
                     
-                                 
-                    
-                    <div class="row">
-                        <div class="col-md-4">
-                            
-                            <!-- START USERS ACTIVITY BLOCK -->
-                            <div class="panel panel-default">
-                                <div class="panel-heading" style=>
-                                    <div class="panel-title-box">
-                                        <h3>Users Activity</h3>
-                                        <span>Users vs returning</span>
-                                    </div>                                    
-                                    <ul class="panel-controls" style="margin-top: 2px;">
-                                        <li><a href="#" class="panel-fullscreen"><span class="fa fa-expand"></span></a></li>
-                                        <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog"></span></a>                                        
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span> Collapse</a></li>
-                                                <li><a href="#" class="panel-remove"><span class="fa fa-times"></span> Remove</a></li>
-                                            </ul>                                        
-                                        </li>                                        
-                                    </ul>                                    
-                                </div>                                
-                                <div class="panel-body padding-0">
-                                    
-                                </div>                                    
-                            </div>
-                            <!-- END USERS ACTIVITY BLOCK -->
-                            
-                        
-                    </div>
-                    
-                   
-                    
-                    <!-- START DASHBOARD CHART -->
-					<div class="chart-holder" id="dashboard-area-1" style="height: 200px;"></div>
-					<div class="block-full-width">
-                                                                       
-                    </div>                    
-                    <!-- END DASHBOARD CHART -->
-                    
-                </div>
-                <!-- END PAGE CONTENT WRAPPER -->                                
-            </div>            
-            <!-- END PAGE CONTENT -->
+                          
         </div>
         <!-- END PAGE CONTAINER -->
 
@@ -237,8 +190,43 @@
         <script type="text/javascript" src="js/plugins.js"></script>        
         <script type="text/javascript" src="js/actions.js"></script>
         
-       
         <!-- END TEMPLATE -->
+		<!-- start  custom js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+    <script src="https://rawgit.com/dwmkerr/angular-modal-service/master/dst/angular-modal-service.js"></script>
+    <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.2/ui-bootstrap-tpls.min.js"></script> 
+    <script type="text/javascript" src="js/custom/Router.js"></script>
+    <script type="text/javascript" src="js/custom/HomePageController.js"></script>
+    <script type="text/javascript" src="js/custom/ProfileController.js"></script>
+    <script type="text/javascript" src="js/custom/UserController.js"></script>
+    <script type="text/javascript" src="js/custom/SubscriptionController.js"></script>
+    <script type="text/javascript" src="js/custom/ServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/ViewServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/ManageServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/FlowController.js"></script>
+    <script type="text/javascript" src="js/custom/DestinationController.js"></script>
+    <script type="text/javascript" src="js/custom/FlightInfoServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/AdministrationServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/TravelInfoServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/AirlineInfoServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/WeatherInfoServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/AirportInfoServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/TransportInfoServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/FlightConnectionServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/MessageBroadcastServiceController.js"></script>
+    <script type="text/javascript" src="js/custom/ErrorController.js"></script>
+    <script type="text/javascript" src="js/custom/AboutUsController.js"></script>
+    
+    
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>
+		
+		 
+		<!-- end  custom js -->
     <!-- END SCRIPTS -->         
     </body>
 </html>
