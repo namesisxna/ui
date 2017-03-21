@@ -1,5 +1,6 @@
 (function(){
 var app=angular.module("HomePageView");
+alert("from HomePageController.js")
 
 var HomePageController = function($scope){
 	  
